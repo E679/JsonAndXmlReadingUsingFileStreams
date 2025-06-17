@@ -14,16 +14,15 @@ public class JSONFileReading {
         getFile();
     }
     public static void getFile() throws IOException {
-        FileReader fileReader=new FileReader("/C:\\Users\\chait\\Downloads\\JsonAndXMLReading\\JsonAndXMLReading\\src\\main\\resources\\EntityModel.json");
-        System.out.println(fileReader);
+//        FileReader fileReader=new FileReader("/src/main/resources/EntityModel.json");
+//        System.out.println(fileReader);
 
         InputStream inputStream=null;
         inputStream=EntityModel.class.getResourceAsStream("/EntityModel.json");
 
         //EntityModel entityModel=new EntityModel();
         ObjectMapper objectMapper=new ObjectMapper();
-        EntityModel entityModel1 = objectMapper.readValue(inputStream, new TypeReference<EntityModel>() {
-        });
+        EntityModel entityModel1 = objectMapper.readValue(inputStream, new TypeReference<EntityModel>() {});
 
         if(entityModel1.getId()!=0 && !entityModel1.getName().isEmpty()){
             System.out.println("Deserialized ID: "+entityModel1.getId());
