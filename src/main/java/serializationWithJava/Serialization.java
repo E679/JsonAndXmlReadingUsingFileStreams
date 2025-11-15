@@ -7,6 +7,7 @@ public class Serialization {
     public static void main(String[] args) {
         serializationMethod();
         deSerializationMethod();
+        //Refer Link for serialization and deserialization: https://www.geeksforgeeks.org/serialization-in-java/
     }
 
     private static void serializationMethod() {
